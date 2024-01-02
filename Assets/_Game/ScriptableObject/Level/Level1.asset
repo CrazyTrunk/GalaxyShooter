@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd197cb89c1c9ce43acdfdf6aa03b384, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: 
+  level: 1
+  numberOfBots: 12
+  waves:
+  - {fileID: 11400000, guid: 772ffb339f0591742b16b33e8bf1d8ce, type: 2}
+  - {fileID: 11400000, guid: c5e806f5708590e45b757eb8dad26171, type: 2}
