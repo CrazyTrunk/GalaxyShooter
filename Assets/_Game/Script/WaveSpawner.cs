@@ -15,6 +15,7 @@ public class WaveSpawner : Singleton<WaveSpawner>
     {
         listBots = new List<GameObject>();
         wayPoints = new List<Transform>();
+        isSpawning = true;
         StartCoroutine(SpawnDemoWaves());
     }
     public WaveData GetCurrentWave()
@@ -60,23 +61,8 @@ public class WaveSpawner : Singleton<WaveSpawner>
                 waveIndex++;
             }
         }
-        //currentWaveSO = levelSO.waves[0];
-        //if (currentWaveSO.IsScene)
-        //{
-        //    GameObject path = Instantiate(currentWaveSO.pathPrefab, new Vector3(0, 10, 0), Quaternion.identity);
-        //    wayPoints.AddRange(currentWaveSO.GetWayPoints(path.transform));
+        yield return new WaitForSeconds(2f);
 
-        //    for (int i = 0; i < wayPoints.Count; i++)
-        //    {
-
-        //        GameObject bot = Instantiate(currentWaveSO.GetEnemyPrefab(Random.Range(0, 3)),
-        //                           new Vector3(0, 15, 0),
-        //                           Quaternion.identity);
-        //        WayFinder wayFinder = bot.GetComponent<WayFinder>();
-        //        wayFinder.SetDestionation(wayPoints[i]);
-        //        listBots.Add(bot);
-        //        yield return new WaitForSeconds(0.5f);
-        //    }
-        //}
+        isSpawning = false;
     }
 }
